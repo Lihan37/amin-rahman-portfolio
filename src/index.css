@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --leaf: #3b8132;
+    --leaf-dark: #2f6a28;
+    --ink: #102315;
+    --sand: #f3f6ef;
+  }
+
+  * {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    background:
+      radial-gradient(circle at top left, rgba(59, 129, 50, 0.18), transparent 55%),
+      radial-gradient(circle at 20% 40%, rgba(47, 106, 40, 0.14), transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(59, 129, 50, 0.12), transparent 45%),
+      #eef4ea;
+    color: var(--ink);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Fraunces", "Times New Roman", serif;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up-delayed > * {
+  animation: fade-up 0.85s ease-out both;
+}
+
+.animate-fade-up-delayed > *:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.animate-fade-up-delayed > *:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.animate-fade-up-delayed > *:nth-child(3) {
+  animation-delay: 0.25s;
+}
+
+.animate-fade-up-delayed > *:nth-child(4) {
+  animation-delay: 0.35s;
+}
+
+.animate-fade-up-delayed > *:nth-child(5) {
+  animation-delay: 0.45s;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out both;
+}
+
+.animate-fade-up-delayed {
+  animation: fade-up 0.9s ease-out 0.15s both;
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: float-soft 6s ease-in-out infinite;
+}
