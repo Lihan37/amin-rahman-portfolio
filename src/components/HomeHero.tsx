@@ -48,7 +48,7 @@ function HomeHero() {
             </div>
             <div className="absolute left-1/2 top-1/2 z-30 h-55 w-[170px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[26px] border border-white/80 bg-white/95 shadow-[0_20px_55px_rgba(16,35,21,0.22)] ring-1 ring-[color:var(--leaf)]/18 transform-gpu sm:h-[235px] sm:w-45 md:h-[250px] md:w-[190px]">
               <img
-                src="https://res.cloudinary.com/duaysox2a/image/upload/v1770564072/amin_1_hgprro.jpg"
+                src="https://res.cloudinary.com/duaysox2a/image/upload/v1770566931/amin_1_hgprro.webp"
                 alt="Amin Rahman standing in a park"
                 className="h-full w-full object-cover object-[center_20%]"
                 loading="eager"
