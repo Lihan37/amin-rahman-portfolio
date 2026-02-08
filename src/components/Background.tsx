@@ -21,9 +21,10 @@ function Background() {
           <div className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-[color:var(--leaf)]/15 blur-2xl transition group-hover:scale-110" />
           <h3 className="text-2xl font-semibold">Bangladesh Air Force</h3>
           <p className="mt-4 text-base text-[color:var(--ink)]/75">
-            Retired Wing Commander, a senior leadership rank equivalent to Lieutenant Colonel.
-            Served over 19 years in demanding roles requiring calm judgement, accountability,
-            and respect for institutions.
+            A retired Wing Commander, a senior leadership rank equivalent to
+            Lieutenant Colonel. I served for over 19 years in demanding roles
+            that required calm judgement, accountability and deep respect for
+            institutions.
           </p>
         </article>
         <article className="group relative overflow-hidden rounded-[28px] border border-white/70 bg-white/80 p-8 shadow-xl shadow-black/10 transition duration-500 hover:-translate-y-1 hover:shadow-2xl">
@@ -31,10 +32,10 @@ function Background() {
           <h3 className="text-2xl font-semibold">Senior appointments</h3>
           <ul className="mt-4 space-y-3 text-base text-[color:var(--ink)]/75">
             {[
-              'Assistant Personal Secretary to the Chief of the Air Staff',
-              'General Staff Officer in the Prime Minister’s Office of Bangladesh',
-              'Key appointments at Air Headquarters',
-              'Member of the Flying Category Board at Air Headquarters',
+              "Assistant Personal Secretary to the Chief of the Air Staff",
+              "General Staff Officer in the Prime Minister’s Office of Bangladesh",
+              "Key appointments at Air Headquarters",
+              "Member of the Flying Category Board at Air Headquarters",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
                 <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full border border-[color:var(--leaf)]/35 bg-white/90 text-xs font-bold text-[color:var(--leaf-dark)]">
@@ -49,14 +50,12 @@ function Background() {
           <div className="pointer-events-none absolute right-10 top-10 h-28 w-28 rounded-full bg-[color:var(--leaf-dark)]/10 blur-2xl" />
           <h3 className="text-2xl font-semibold">Aviation leadership + MBA</h3>
           <p className="mt-4 text-base text-[color:var(--ink)]/75">
-            After retiring from the Air Force, worked in aviation as Director of Operations
-            and General Manager. Completed an MBA from a Canadian university, strengthening
-            governance, finance, and strategic planning.
+            After retiring from the Air Force, I completed an MBA from a Canadian university, strengthening my understanding of governance, finance and strategic planning. I then worked in the aviation industry as Director of Operations and as a General Manager in the corporate sector.
           </p>
         </article>
       </div>
     </section>
-  )
+  );
 }
 
-export default Background
+export default Background;

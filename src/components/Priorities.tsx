@@ -1,5 +1,9 @@
 const priorities = [
   {
+    title: 'Community Trust',
+    description: 'Strengthening confidence between residents, services and local government.',
+  },
+  {
     title: 'Housing',
     description: 'Supporting fair access, better standards and responsible decision making.',
   },
@@ -14,10 +18,6 @@ const priorities = [
   {
     title: 'Green Spaces and Waterways',
     description: 'Protecting parks, wilderness areas and natural spaces for future generations.',
-  },
-  {
-    title: 'Community Trust',
-    description: 'Strengthening confidence between residents, services and local government.',
   },
 ]
 

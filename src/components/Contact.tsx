@@ -20,7 +20,12 @@ function Contact() {
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--leaf-dark)]">
             Email
           </p>
-          <p className="mt-2 text-base font-semibold">campaign@aminrahman.com</p>
+          <a
+            href="mailto:amin2050@gmail.com"
+            className="mt-2 inline-block text-base font-semibold text-[color:var(--leaf-dark)] hover:underline"
+          >
+            amin2050@gmail.com
+          </a>
         </div>
         <div className="rounded-2xl border border-[color:var(--leaf)]/20 bg-white/70 p-4">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--leaf-dark)]">
@@ -28,9 +33,12 @@ function Contact() {
           </p>
           <p className="mt-2 text-base font-semibold">Mile End · Tower Hamlets</p>
         </div>
-        <button className="w-full rounded-full bg-[color:var(--leaf)] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[color:var(--leaf)]/30 transition hover:-translate-y-0.5 hover:bg-[color:var(--leaf-dark)]">
+        <a
+          href="mailto:amin2050@gmail.com"
+          className="w-full rounded-full bg-[color:var(--leaf)] px-6 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-[color:var(--leaf)]/30 transition hover:-translate-y-0.5 hover:bg-[color:var(--leaf-dark)]"
+        >
           Send a message
-        </button>
+        </a>
       </div>
     </section>
   )

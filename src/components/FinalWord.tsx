@@ -17,8 +17,12 @@ function FinalWord() {
         </h2>
         <p className="text-base text-[color:var(--ink)]/75 md:text-lg">
           I come from a background where service was not optional. It was expected. I bring
-          that same mindset to Tower Hamlets. I want to listen, work hard and represent Mile
-          End with integrity and respect. Thank you for taking the time to read my story.
+          that same sense of duty to Tower Hamlets. I want to listen carefully, work hard and
+          represent Mile End with integrity, fairness and respect.
+        </p>
+        <p className="text-base text-[color:var(--ink)]/75 md:text-lg">
+          I would be honoured to earn your trust and to serve our community with
+          responsibility and care. Thank you for taking the time to read my story.
         </p>
         <div className="mt-2 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-[color:var(--leaf-dark)]/70">
           <span className="h-1.5 w-12 rounded-full bg-[color:var(--leaf)]/60" />

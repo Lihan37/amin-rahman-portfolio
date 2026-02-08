@@ -20,22 +20,23 @@ function WhyStanding() {
           <div className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-[color:var(--leaf)]/15 blur-2xl transition group-hover:scale-110" />
           <h3 className="text-2xl font-semibold">Motivation</h3>
           <p className="mt-4 text-base text-[color:var(--ink)]/75">
-            I am standing because I believe Tower Hamlets needs councillors who are
-            principled, capable, and calm under pressure.
+            I am standing because I genuinely care about Tower Hamlets and
+            believe it deserves councillors who act with principle, competence
+            and calm judgement, especially when things get difficult.
           </p>
         </article>
         <article className="group relative overflow-hidden rounded-[28px] border border-white/70 bg-white/80 p-8 shadow-xl shadow-black/10 transition duration-500 hover:-translate-y-1 hover:shadow-2xl">
           <div className="pointer-events-none absolute -left-8 -bottom-8 h-24 w-24 rounded-full bg-[color:var(--leaf)]/15 blur-2xl transition group-hover:scale-110" />
           <h3 className="text-2xl font-semibold">Leadership approach</h3>
           <p className="mt-4 text-base text-[color:var(--ink)]/75">
-            Local politics should be about listening, fairness and practical solutions.
-            My aim is to work constructively with colleagues, respect collective decisions,
-            and always put residents first.
+            Local politics should be about listening, fairness and practical
+            solutions. My aim is to work constructively with colleagues, respect
+            collective decisions and always put residents first.
           </p>
         </article>
       </div>
     </section>
-  )
+  );
 }
 
-export default WhyStanding
+export default WhyStanding;

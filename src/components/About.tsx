@@ -18,12 +18,13 @@ function About() {
           My name is Amin Rahman. I am a British citizen, a long-standing resident of the UK
           and a proud member of the Bangladeshi community in Tower Hamlets. I believe
           deeply in public service, integrity and responsibility. My life has been shaped by
-          service in uniform, professional leadership and community work.
+          service in uniform, leadership and community work.
         </p>
         <p className="mt-4 text-base text-(--ink)/75">
-          I see my background not as a badge but as a duty to serve people honestly and fairly.
-          I am proud of my Bangladeshi roots and proud of what our community contributes to
-          Tower Hamlets. I want to represent that contribution with dignity, discipline and care.
+          I see my background not as a badge but as a responsibility. A responsibility to
+          serve people honestly and fairly. I am proud of my Bangladeshi roots and of what
+          our community contributes to Tower Hamlets. I want to represent that contribution
+          with dignity, discipline and genuine care.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           {['Community-first', 'Integrity-led', 'Service in uniform'].map((item) => (
@@ -37,9 +38,9 @@ function About() {
         </div>
       </div>
 
-      <div className="relative animate-fade-up">
+      <div className="relative flex items-center justify-center animate-fade-up">
         <div className="absolute -inset-1 rounded-[30px] bg-(--leaf)/10 blur-xl" />
-        <div className="relative rounded-[28px] border border-white/70 bg-white/80 p-8 shadow-xl shadow-black/10">
+        <div className="relative w-full max-w-md rounded-[28px] border border-white/70 bg-white/80 p-8 shadow-xl shadow-black/10">
           <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.35em] text-(--leaf-dark)/70">
             <span>Values</span>
             <span>Principles</span>

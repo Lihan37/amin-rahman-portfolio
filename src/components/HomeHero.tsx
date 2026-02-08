@@ -1,29 +1,25 @@
 function HomeHero() {
   return (
-    <header
-      id="home"
-      className="mx-auto grid w-full max-w-6xl gap-12 px-6 pb-20 pt-4 sm:pt-8"
-    >
+    <header id="home" className="mx-auto grid w-full max-w-6xl gap-12 px-6 pb-20 pt-8">
       <div className="grid items-center gap-10 md:grid-cols-[1.05fr_0.95fr] animate-fade-up">
         <div className="relative space-y-6">
-          <div className="space-y-2 pt-3 text-base font-semibold uppercase tracking-[0.45em] text-[color:var(--leaf-dark)] animate-fade-up-delayed">
+          <div className="space-y-2 text-sm font-semibold uppercase tracking-[0.45em] text-[color:var(--leaf-dark)] animate-fade-up-delayed">
             <p>Council Candidate</p>
-            <p className="text-sm tracking-[0.5em] text-[color:var(--leaf-dark)]/80">
+            <p className="text-xs tracking-[0.5em] text-[color:var(--leaf-dark)]/80">
               Mile End, Tower Hamlets
             </p>
           </div>
-          <h1 className="text-4xl font-semibold leading-tight md:text-6xl animate-fade-up-delayed">
-            Amin Rahman
+
+          <h1 className="inline-grid grid-cols-[auto_auto] items-end gap-x-3 gap-y-2 text-4xl font-semibold leading-tight md:text-6xl animate-fade-up-delayed">
+            <span>Amin</span>
+            <span>Rahman</span>
+            <span className="col-start-2 ml-[0.6em] whitespace-nowrap text-[0.95rem] font-bold italic tracking-normal text-[color:var(--leaf-dark)]/90 sm:text-xl md:ml-[0.9em] lg:ml-[1.1em] md:text-2xl">
+              B.Sc (Aeronautics), MBA
+            </span>
           </h1>
+
           <ul className="space-y-2 text-base font-bold uppercase tracking-[0.28em] text-[color:var(--leaf-dark)]/90 animate-fade-up-delayed md:text-lg">
-            {[
-              'B.Sc (Aeronautics)',
-              'MBA',
-              'Wing Commander (Retired)',
-              'Airline Pilot',
-              'School Governor',
-              'Lecturer',
-            ].map(
+            {['Wing Commander (Retired)', 'Airline Pilot', 'School Governor', 'Lecturer'].map(
               (item) => (
                 <li key={item} className="flex items-center gap-3">
                   <span className="h-2.5 w-2.5 rounded-full bg-[color:var(--leaf)] shadow-[0_0_0_4px_rgba(59,129,50,0.12)]" />
@@ -32,8 +28,9 @@ function HomeHero() {
               ),
             )}
           </ul>
+
           <p className="max-w-xl text-lg text-[color:var(--ink)]/75 md:text-xl animate-fade-up-delayed">
-            British citizen, long-standing UK resident, and proud member of the Bangladeshi
+            British citizen, long-standing UK resident and proud member of the Bangladeshi
             community in Tower Hamlets. Dedicated to public service, integrity, and responsibility.
           </p>
         </div>
@@ -49,9 +46,9 @@ function HomeHero() {
                 loading="lazy"
               />
             </div>
-            <div className="absolute left-1/2 top-1/2 z-30 h-55 w-[170px] rotate-2 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[26px] border border-white/80 bg-white/95 shadow-[0_20px_55px_rgba(16,35,21,0.22)] ring-1 ring-[color:var(--leaf)]/18 sm:h-[235px] sm:w-45 md:h-[250px] md:w-[190px]">
+            <div className="absolute left-1/2 top-1/2 z-30 h-55 w-[170px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[26px] border border-white/80 bg-white/95 shadow-[0_20px_55px_rgba(16,35,21,0.22)] ring-1 ring-[color:var(--leaf)]/18 transform-gpu sm:h-[235px] sm:w-45 md:h-[250px] md:w-[190px]">
               <img
-                src="https://res.cloudinary.com/duaysox2a/image/upload/v1770488793/amin_1_hgprro.jpg"
+                src="https://res.cloudinary.com/duaysox2a/image/upload/v1770564072/amin_1_hgprro.jpg"
                 alt="Amin Rahman standing in a park"
                 className="h-full w-full object-cover object-[center_20%]"
                 loading="eager"
@@ -69,9 +66,8 @@ function HomeHero() {
         </div>
       </div>
 
-
       <div className="grid gap-6 animate-fade-up-delayed">
-          <div className="rounded-3xl border border-white/70 bg-white/60 p-6 text-center shadow-xl shadow-black/5 backdrop-blur">
+        <div className="rounded-3xl border border-white/70 bg-white/60 p-6 text-center shadow-xl shadow-black/5 backdrop-blur">
           <div className="flex flex-wrap justify-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--leaf-dark)] sm:text-sm sm:tracking-[0.35em]">
             {['Leadership', 'Community Champion', "People's Person"].map((item) => (
               <span
@@ -94,7 +90,6 @@ function HomeHero() {
           </div>
         </div>
       </div>
-
     </header>
   )
 }

@@ -22,10 +22,10 @@ function App() {
 
       <main className="mx-auto w-full max-w-6xl space-y-24 px-6 pb-24">
         <About />
-        <section className="rounded-[32px] border border-white/70 bg-[color:var(--leaf)]/10 p-6 shadow-xl shadow-black/5 backdrop-blur">
+        <section className="rounded-4xl border border-white/70 bg-(--leaf)/10 p-6 shadow-xl shadow-black/5 backdrop-blur">
           <div className="flex flex-wrap items-end justify-center gap-4 text-center">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[color:var(--leaf-dark)]/80">
+              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-(--leaf-dark)/80">
                 Photo Gallery
               </p>
               <h2 className="mt-3 text-2xl font-semibold md:text-3xl">
@@ -76,9 +76,27 @@ function App() {
                     'https://res.cloudinary.com/duaysox2a/image/upload/v1770537558/amin_3_tqudv3.jpg',
                   text: '',
                 },
+                {
+                  image:
+                    'https://res.cloudinary.com/duaysox2a/image/upload/v1770564687/WhatsApp_Image_2026-02-08_at_20.26.26_tuip4v.jpg',
+                  text: '',
+                },
+                {
+                  image:
+                    'https://res.cloudinary.com/duaysox2a/image/upload/v1770564687/WhatsApp_Image_2026-02-08_at_20.26.25_1_snfeaw.jpg',
+                  text: '',
+                },
+                {
+                  image:
+                    'https://res.cloudinary.com/duaysox2a/image/upload/v1770564688/WhatsApp_Image_2026-02-08_at_20.26.25_uep4rg.jpg',
+                  text: '',
+                },
               ]}
             />
           </div>
+          <p className="mt-3 text-center text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--leaf-dark)]/70">
+            Swipe left or right to explore more
+          </p>
         </section>
         <Background />
         <UKLifeWork />
