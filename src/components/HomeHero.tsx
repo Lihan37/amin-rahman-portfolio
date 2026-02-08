@@ -2,13 +2,13 @@ function HomeHero() {
   return (
     <header
       id="home"
-      className="mx-auto grid w-full max-w-6xl gap-12 px-6 pb-20 pt-8"
+      className="mx-auto grid w-full max-w-6xl gap-12 px-6 pb-20 pt-4 sm:pt-8"
     >
       <div className="grid items-center gap-10 md:grid-cols-[1.05fr_0.95fr] animate-fade-up">
         <div className="relative space-y-6">
-          <div className="space-y-2 text-sm font-semibold uppercase tracking-[0.45em] text-[color:var(--leaf-dark)] animate-fade-up-delayed">
+          <div className="space-y-2 pt-3 text-base font-semibold uppercase tracking-[0.45em] text-[color:var(--leaf-dark)] animate-fade-up-delayed">
             <p>Council Candidate</p>
-            <p className="text-xs tracking-[0.5em] text-[color:var(--leaf-dark)]/80">
+            <p className="text-sm tracking-[0.5em] text-[color:var(--leaf-dark)]/80">
               Mile End, Tower Hamlets
             </p>
           </div>
@@ -71,18 +71,18 @@ function HomeHero() {
 
 
       <div className="grid gap-6 animate-fade-up-delayed">
-        <div className="rounded-3xl border border-white/70 bg-white/60 p-6 text-center shadow-xl shadow-black/5 backdrop-blur">
-          <div className="flex flex-wrap justify-center gap-3 text-sm font-bold uppercase tracking-[0.35em] text-[color:var(--leaf-dark)]">
+          <div className="rounded-3xl border border-white/70 bg-white/60 p-6 text-center shadow-xl shadow-black/5 backdrop-blur">
+          <div className="flex flex-wrap justify-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--leaf-dark)] sm:text-sm sm:tracking-[0.35em]">
             {['Leadership', 'Community Champion', "People's Person"].map((item) => (
               <span
                 key={item}
-                className="rounded-full border border-[color:var(--leaf)]/35 bg-white/90 px-5 py-2 shadow-[0_8px_22px_rgba(59,129,50,0.16)]"
+                className="w-full rounded-full border border-[color:var(--leaf)]/35 bg-white/90 px-4 py-2 shadow-[0_8px_22px_rgba(59,129,50,0.16)] sm:w-auto sm:px-5"
               >
                 {item}
               </span>
             ))}
           </div>
-          <div className="mx-auto mt-4 inline-flex flex-wrap items-center justify-center gap-3 rounded-full border border-[color:var(--leaf)]/35 bg-[color:var(--leaf)]/10 px-5 py-3 text-sm font-bold uppercase tracking-[0.45em] text-[color:var(--leaf-dark)]">
+          <div className="mx-auto mt-4 inline-flex w-full max-w-md flex-wrap items-center justify-center gap-2 rounded-full border border-[color:var(--leaf)]/35 bg-[color:var(--leaf)]/10 px-4 py-3 text-xs font-bold uppercase tracking-[0.25em] text-[color:var(--leaf-dark)] sm:w-auto sm:max-w-none sm:gap-3 sm:px-5 sm:text-sm sm:tracking-[0.45em]">
             {['Discipline', 'Accountability', 'Integrity', 'Service'].map((item, index) => (
               <span key={item} className="inline-flex items-center gap-3">
                 {index > 0 ? (

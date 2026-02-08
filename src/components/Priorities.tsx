@@ -23,24 +23,36 @@ const priorities = [
 
 function Priorities() {
   return (
-    <section id="priorities" className="space-y-10">
-      <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[color:var(--leaf-dark)]">
+    <section
+      id="priorities"
+      className="relative space-y-8 overflow-hidden rounded-[32px] border border-white/70 bg-white/55 p-6 shadow-xl shadow-black/5 backdrop-blur"
+    >
+      <div className="pointer-events-none absolute -left-16 top-8 h-56 w-56 rounded-full bg-[color:var(--leaf)]/15 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-20 right-12 h-64 w-64 rounded-full bg-[color:var(--leaf-dark)]/10 blur-3xl" />
+
+      <div className="relative">
+        <p className="text-sm font-bold uppercase tracking-[0.4em] text-[color:var(--leaf-dark)]/80">
           Priorities
         </p>
-        <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
+        <h2 className="mt-4 text-4xl font-semibold md:text-5xl">
           My priorities for Mile End.
         </h2>
       </div>
-      <div className="grid gap-6 md:grid-cols-2">
-        {priorities.map((priority) => (
-          <article
+
+      <div className="grid gap-4">
+        {priorities.map((priority, index) => (
+          <div
             key={priority.title}
-            className="rounded-3xl border border-white/70 bg-white/70 p-6 shadow-xl shadow-black/5 backdrop-blur"
+            className="flex flex-wrap items-start gap-4 rounded-[26px] border border-white/70 bg-white/80 p-5 shadow-lg shadow-black/5 transition duration-500 hover:-translate-y-1 hover:shadow-xl"
           >
-            <h3 className="text-xl font-semibold">{priority.title}</h3>
-            <p className="mt-3 text-sm text-[color:var(--ink)]/75">{priority.description}</p>
-          </article>
+            <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-full border border-[color:var(--leaf)]/35 bg-white text-xs font-bold text-[color:var(--leaf-dark)]">
+              {String(index + 1).padStart(2, '0')}
+            </div>
+            <div className="min-w-[220px] flex-1">
+              <h3 className="text-xl font-semibold">{priority.title}</h3>
+              <p className="mt-2 text-sm text-[color:var(--ink)]/75">{priority.description}</p>
+            </div>
+          </div>
         ))}
       </div>
     </section>

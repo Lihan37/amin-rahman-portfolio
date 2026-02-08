@@ -12,11 +12,11 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="min-h-screen bg-(--sand) text-(--ink)">
+    <div className="min-h-screen bg-(--sand) pt-16 text-(--ink) sm:pt-20 md:pt-24">
+      <Navbar />
       <div className="relative overflow-hidden">
         <div className="pointer-events-none absolute -top-24 right-0 h-64 w-64 rounded-full bg-(--leaf)/20 blur-3xl" />
         <div className="pointer-events-none absolute top-40 left-12 h-72 w-72 rounded-full bg-(--leaf-dark)/10 blur-3xl" />
-        <Navbar />
         <HomeHero />
       </div>
 

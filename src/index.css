@@ -12,6 +12,13 @@
     scroll-behavior: smooth;
   }
 
+  html,
+  body,
+  #root {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     font-family: "Space Grotesk", "Segoe UI", sans-serif;
     background:
@@ -20,6 +27,7 @@
       radial-gradient(circle at 80% 20%, rgba(59, 129, 50, 0.12), transparent 45%),
       #eef4ea;
     color: var(--ink);
+    overflow-x: hidden;
   }
 
   h1,
