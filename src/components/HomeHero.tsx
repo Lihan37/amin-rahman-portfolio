@@ -37,8 +37,8 @@ function HomeHero() {
 
         <div className="relative">
           <div className="absolute -inset-6 rounded-[40px] bg-[color:var(--leaf)]/10 blur-2xl" />
-          <div className="relative h-80 w-full sm:h-90 md:h-105">
-            <div className="absolute left-2 top-2 z-10 h-50 w-[155px] -rotate-6 overflow-hidden rounded-[24px] border border-white/75 bg-white/90 shadow-[0_18px_45px_rgba(16,35,21,0.18)] ring-1 ring-[color:var(--leaf)]/15 sm:left-3 sm:top-3 sm:h-55 sm:w-[170px] md:left-2 md:top-4 md:h-65 md:w-50">
+          <div className="relative h-[360px] w-full sm:h-90 md:h-105">
+            <div className="absolute left-0 top-1 z-10 h-[210px] w-[160px] -rotate-6 overflow-hidden rounded-[24px] border border-white/75 bg-white/90 shadow-[0_18px_45px_rgba(16,35,21,0.18)] ring-1 ring-[color:var(--leaf)]/15 sm:left-3 sm:top-3 sm:h-55 sm:w-[170px] md:left-2 md:top-4 md:h-65 md:w-50">
               <img
                 src="https://res.cloudinary.com/duaysox2a/image/upload/v1770496555/amon_4_vdxwbt.jpg"
                 alt="Amin Rahman portrait"
@@ -46,7 +46,7 @@ function HomeHero() {
                 loading="lazy"
               />
             </div>
-            <div className="absolute left-1/2 top-1/2 z-30 h-55 w-[170px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[26px] border border-white/80 bg-white/95 shadow-[0_20px_55px_rgba(16,35,21,0.22)] ring-1 ring-[color:var(--leaf)]/18 transform-gpu sm:h-[235px] sm:w-45 md:h-[250px] md:w-[190px]">
+            <div className="absolute left-1/2 top-1/2 z-30 h-[210px] w-[160px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[26px] border border-white/80 bg-white/95 shadow-[0_20px_55px_rgba(16,35,21,0.22)] ring-1 ring-[color:var(--leaf)]/18 transform-gpu sm:h-[235px] sm:w-45 md:h-[250px] md:w-[190px]">
               <img
                 src="https://res.cloudinary.com/duaysox2a/image/upload/v1770566931/amin_1_hgprro.webp"
                 alt="Amin Rahman standing in a park"
@@ -54,7 +54,7 @@ function HomeHero() {
                 loading="eager"
               />
             </div>
-            <div className="absolute bottom-2 right-2 z-20 h-50 w-[155px] rotate-6 overflow-hidden rounded-[24px] border border-white/75 bg-white/90 shadow-[0_18px_45px_rgba(16,35,21,0.18)] ring-1 ring-[color:var(--leaf)]/15 sm:bottom-3 sm:right-3 sm:h-[215px] sm:w-[165px] md:bottom-4 md:right-2 md:h-[255px] md:w-[195px]">
+            <div className="absolute bottom-0 right-0 z-20 h-[210px] w-[160px] rotate-6 overflow-hidden rounded-[24px] border border-white/75 bg-white/90 shadow-[0_18px_45px_rgba(16,35,21,0.18)] ring-1 ring-[color:var(--leaf)]/15 sm:bottom-3 sm:right-3 sm:h-[215px] sm:w-[165px] md:bottom-4 md:right-2 md:h-[255px] md:w-[195px]">
               <img
                 src="https://res.cloudinary.com/duaysox2a/image/upload/v1770494672/amin_2_a06tk6.jpg"
                 alt="Amin Rahman community moment"

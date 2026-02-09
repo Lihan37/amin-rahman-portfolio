@@ -12,7 +12,7 @@ function About() {
           Who I Am
         </p>
         <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
-          Service, integrity, and responsibility.
+          Service, Integrity, Discipline and Accountability
         </h2>
         <p className="mt-4 text-base text-(--ink)/75">
           My name is Amin Rahman. I am a British citizen, a long-standing resident of the UK

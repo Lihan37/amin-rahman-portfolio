@@ -13,7 +13,7 @@ function FinalWord() {
           A Final Word
         </p>
         <h2 className="text-4xl font-semibold md:text-5xl">
-          Service is not optional. It is expected.
+          Service Is Not Optional. It Is Expected.
         </h2>
         <p className="text-base text-[color:var(--ink)]/75 md:text-lg">
           I come from a background where service was not optional. It was expected. I bring

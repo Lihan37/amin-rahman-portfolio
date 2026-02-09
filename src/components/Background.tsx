@@ -12,7 +12,7 @@ function Background() {
           Background
         </p>
         <h2 className="mt-4 text-4xl font-semibold md:text-5xl">
-          Military leadership and strategic roles.
+          Military Leadership and Strategic Roles
         </h2>
       </div>
 

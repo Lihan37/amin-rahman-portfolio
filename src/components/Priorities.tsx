@@ -35,7 +35,7 @@ function Priorities() {
           Priorities
         </p>
         <h2 className="mt-4 text-4xl font-semibold md:text-5xl">
-          My priorities for Mile End.
+          My Priorities for Mile End Ward
         </h2>
       </div>
 

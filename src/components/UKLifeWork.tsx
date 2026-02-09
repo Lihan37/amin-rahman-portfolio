@@ -12,7 +12,7 @@ function UKLifeWork() {
           UK Life &amp; Work
         </p>
         <h2 className="mt-4 text-4xl font-semibold md:text-5xl">
-          Professional work and local service in the UK.
+          Professional Work and Local Service in the UK
         </h2>
       </div>
       <div className="grid gap-6 md:grid-cols-2 animate-fade-up-delayed">

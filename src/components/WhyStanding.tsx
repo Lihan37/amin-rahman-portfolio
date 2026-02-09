@@ -12,7 +12,7 @@ function WhyStanding() {
           Why I’m Standing
         </p>
         <h2 className="mt-4 text-4xl font-semibold md:text-5xl">
-          Focused on service rather than slogans.
+          Focused on Service Rather Than Slogans
         </h2>
       </div>
       <div className="grid gap-6 md:grid-cols-2 animate-fade-up-delayed">
