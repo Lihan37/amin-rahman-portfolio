@@ -17,10 +17,7 @@ function Footer() {
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-12 text-center md:text-left">
         <div className="flex flex-col gap-2">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[color:var(--leaf-dark)]">
-            Green Party
-          </p>
-          <p className="text-base text-[color:var(--ink)]/70">
-            Council Candidate for Mile End, Tower Hamlets.
+            Amin Rahman
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-3 md:justify-start">

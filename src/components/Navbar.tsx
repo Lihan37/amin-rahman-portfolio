@@ -16,25 +16,13 @@ function Navbar() {
 
   return (
     <div className="fixed inset-x-0 top-0 z-50 w-full bg-[color:var(--leaf)]/95 shadow-lg shadow-[color:var(--leaf)]/30 backdrop-blur">
-      <nav className="mx-auto flex w-full items-center justify-between gap-2 px-3 py-2 sm:gap-6 sm:px-6 sm:py-4 md:max-w-6xl">
-        <div className="flex min-w-0 items-center gap-2 sm:gap-3">
-          <img
-            src="https://res.cloudinary.com/duaysox2a/image/upload/v1770494683/green_party_warhcl.jpg"
-            alt="Green Party logo"
-            className="h-14 w-14 flex-shrink-0 rounded-full border border-white/70 bg-white/10 object-cover sm:h-16 sm:w-16"
-            loading="lazy"
-          />
-          <span className="hidden text-lg font-semibold uppercase tracking-[0.2em] text-white sm:inline">
-            Green Party
-          </span>
-        </div>
-
-        <div className="hidden flex-wrap items-center justify-end gap-3 md:flex">
+      <nav className="mx-auto flex w-full items-center justify-center gap-2 px-3 py-3 sm:gap-6 sm:px-6 sm:py-5 md:justify-center md:max-w-6xl">
+        <div className="hidden flex-wrap items-center justify-center gap-4 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="rounded-full border border-white/40 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition hover:border-white hover:text-white"
+              className="rounded-full border border-white/50 px-4.5 py-2 text-[0.82rem] font-bold uppercase tracking-[0.22em] text-white/95 transition hover:border-white hover:text-white sm:text-sm"
             >
               {link.label}
             </a>
@@ -44,11 +32,11 @@ function Navbar() {
         <button
           type="button"
           onClick={() => setOpen((prev) => !prev)}
-          className="rounded-full border border-white/70 bg-white/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-white transition hover:border-white sm:text-xs md:hidden"
+          className="mx-auto rounded-full border border-white/70 bg-white/10 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:border-white sm:text-sm md:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
         >
-          Explore
+          Get to Know Me
         </button>
       </nav>
 
@@ -59,7 +47,7 @@ function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="rounded-2xl border border-white/40 bg-white/10 px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:border-white"
+                className="rounded-2xl border border-white/50 bg-white/10 px-4 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white transition hover:border-white sm:text-sm"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
