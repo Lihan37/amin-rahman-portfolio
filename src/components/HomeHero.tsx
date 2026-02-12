@@ -1,8 +1,8 @@
 function HomeHero() {
   return (
     <header id="home" className="mx-auto grid w-full max-w-6xl gap-12 px-6 pb-20 pt-8 sm:pt-8 md:pt-16">
-      <div className="grid items-center gap-10 md:grid-cols-[1.05fr_0.95fr] animate-fade-up">
-        <div className="relative space-y-6">
+      <div className="grid items-center gap-10 md:grid-cols-[1.05fr_0.95fr] md:grid-rows-[auto_auto] animate-fade-up">
+        <div className="order-1 relative space-y-6 md:col-start-1 md:row-start-1">
           <h1 className="inline-grid grid-cols-[auto_auto] items-end gap-x-3 gap-y-2 text-4xl font-semibold leading-tight md:text-6xl animate-fade-up-delayed">
             <span>Amin</span>
             <span>Rahman</span>
@@ -17,7 +17,7 @@ function HomeHero() {
               'Airline Pilot',
               'School Governor',
               'Lecturer',
-              'Proud father of a child with special needs',
+              'Proud father of my only child with special needs',
               'Full-time carer',
             ].map(
               (item) => (
@@ -29,13 +29,9 @@ function HomeHero() {
             )}
           </ul>
 
-          <p className="max-w-xl text-lg text-[color:var(--ink)]/75 md:text-xl animate-fade-up-delayed">
-            British citizen, long-standing UK resident and proud member of the Bangladeshi
-            community in Tower Hamlets. Dedicated to public service, integrity, and responsibility.
-          </p>
         </div>
 
-        <div className="relative">
+        <div className="order-2 relative md:col-start-2 md:row-start-1 md:row-span-2">
           <div className="absolute -inset-6 rounded-[40px] bg-[color:var(--leaf)]/10 blur-2xl" />
           <div className="relative h-[420px] w-full sm:h-90 md:h-105">
             <div className="absolute left-3 top-4 z-10 h-[190px] w-[150px] -rotate-6 overflow-hidden rounded-[24px] border border-white/75 bg-white/90 shadow-[0_18px_45px_rgba(16,35,21,0.18)] ring-1 ring-[color:var(--leaf)]/15 sm:left-3 sm:top-3 sm:h-55 sm:w-[170px] md:left-2 md:top-4 md:h-65 md:w-50">
@@ -64,6 +60,11 @@ function HomeHero() {
             </div>
           </div>
         </div>
+
+        <p className="order-3 max-w-xl text-lg text-[color:var(--ink)]/75 md:col-start-1 md:row-start-2 md:text-xl animate-fade-up-delayed">
+          British citizen, long-standing UK resident and proud member of the Bangladeshi
+          community in Tower Hamlets. Dedicated to public service, integrity and responsibility.
+        </p>
       </div>
 
       <div className="grid gap-6 animate-fade-up-delayed">
