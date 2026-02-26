@@ -366,8 +366,8 @@ class Media {
     }
     this.scale = this.screen.height / 1500
     const isMobile = this.screen.width < 640
-    const planeHeight = 900
-    const planeWidth = 700
+    const planeHeight = isMobile ? 1020 : 900
+    const planeWidth = isMobile ? 790 : 700
     this.plane.scale.y = (this.viewport.height * (planeHeight * this.scale)) / this.screen.height
     this.plane.scale.x = (this.viewport.width * (planeWidth * this.scale)) / this.screen.width
     this.plane.program.uniforms.uPlaneSizes.value = [this.plane.scale.x, this.plane.scale.y]
@@ -391,6 +391,7 @@ interface AppConfig {
 class App {
   container: HTMLElement
   scrollSpeed: number
+  autoScrollSpeed: number
   scroll: {
     ease: number
     current: number
@@ -434,6 +435,7 @@ class App {
     document.documentElement.classList.remove('no-js')
     this.container = container
     this.scrollSpeed = scrollSpeed
+    this.autoScrollSpeed = 0.02
     this.scroll = { ease: scrollEase, current: 0, target: 0, last: 0 }
     this.onCheckDebounce = debounce(this.onCheck.bind(this), 200)
     this.createRenderer()
@@ -612,7 +614,11 @@ class App {
   }
 
   update() {
-    this.scroll.current = lerp(this.scroll.current, this.scroll.target, this.scroll.ease)
+    if (this.screen.width < 640 && !this.isDown) {
+      this.scroll.target += this.autoScrollSpeed
+    }
+    const effectiveEase = this.screen.width < 640 ? this.scroll.ease * 1.25 : this.scroll.ease
+    this.scroll.current = lerp(this.scroll.current, this.scroll.target, effectiveEase)
     const direction = this.scroll.current > this.scroll.last ? 'right' : 'left'
     if (this.medias) {
       this.medias.forEach((media) => media.update(this.scroll, direction))
