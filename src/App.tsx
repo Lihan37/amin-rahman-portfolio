@@ -1,7 +1,8 @@
+import { useRef } from 'react'
 import Navbar from './components/Navbar'
 import HomeHero from './components/HomeHero'
 import About from './components/About'
-import CircularGallery from './components/CircularGallery'
+import CircularGallery, { type CircularGalleryHandle } from './components/CircularGallery'
 import Background from './components/Background'
 import UKLifeWork from './components/UKLifeWork'
 import WhyStanding from './components/WhyStanding'
@@ -11,6 +12,8 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
+  const galleryRef = useRef<CircularGalleryHandle>(null)
+
   return (
     <div className="min-h-screen bg-(--sand) pt-16 text-(--ink) sm:pt-20 md:pt-24">
       <Navbar />
@@ -33,8 +36,27 @@ function App() {
               </h2>
             </div>
           </div>
-          <div className="relative mt-3 h-[440px] w-full">
+          <div className="mt-4 flex items-center justify-center gap-3">
+            <button
+              type="button"
+              onClick={() => galleryRef.current?.prev()}
+              aria-label="Previous photo"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--leaf)]/35 bg-white/85 text-xl font-semibold text-[color:var(--leaf-dark)] shadow-[0_8px_24px_rgba(16,35,21,0.14)] transition hover:-translate-x-0.5 hover:bg-white active:translate-y-px"
+            >
+              ←
+            </button>
+            <button
+              type="button"
+              onClick={() => galleryRef.current?.next()}
+              aria-label="Next photo"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--leaf)]/35 bg-white/85 text-xl font-semibold text-[color:var(--leaf-dark)] shadow-[0_8px_24px_rgba(16,35,21,0.14)] transition hover:translate-x-0.5 hover:bg-white active:translate-y-px"
+            >
+              →
+            </button>
+          </div>
+          <div className="relative mt-0 h-[440px] w-full">
             <CircularGallery
+              ref={galleryRef}
               items={[
                 {
                   image:
@@ -94,7 +116,7 @@ function App() {
               ]}
             />
           </div>
-          <p className="mt-3 text-center text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--leaf-dark)]/70">
+          <p className="mt-1 text-center text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--leaf-dark)]/70">
             Swipe left or right to explore more
           </p>
         </section>

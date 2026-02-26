@@ -1,5 +1,5 @@
 import { Camera, Mesh, Plane, Program, Renderer, Texture, Transform } from 'ogl'
-import { useEffect, useRef } from 'react'
+import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react'
 
 type GL = Renderer['gl']
 
@@ -317,17 +317,18 @@ class Media {
 
     const x = this.plane.position.x
     const H = this.viewport.width / 2
+    const effectiveBend = this.screen.width < 640 ? 0 : this.bend
 
-    if (this.bend === 0) {
+    if (effectiveBend === 0) {
       this.plane.position.y = 0
       this.plane.rotation.z = 0
     } else {
-      const B_abs = Math.abs(this.bend)
+      const B_abs = Math.abs(effectiveBend)
       const R = (H * H + B_abs * B_abs) / (2 * B_abs)
       const effectiveX = Math.min(Math.abs(x), H)
 
       const arc = R - Math.sqrt(R * R - effectiveX * effectiveX)
-      if (this.bend > 0) {
+      if (effectiveBend > 0) {
         this.plane.position.y = -arc
         this.plane.rotation.z = -Math.sign(x) * Math.asin(effectiveX / R)
       } else {
@@ -364,10 +365,13 @@ class Media {
       }
     }
     this.scale = this.screen.height / 1500
-    this.plane.scale.y = (this.viewport.height * (900 * this.scale)) / this.screen.height
-    this.plane.scale.x = (this.viewport.width * (700 * this.scale)) / this.screen.width
+    const isMobile = this.screen.width < 640
+    const planeHeight = 900
+    const planeWidth = 700
+    this.plane.scale.y = (this.viewport.height * (planeHeight * this.scale)) / this.screen.height
+    this.plane.scale.x = (this.viewport.width * (planeWidth * this.scale)) / this.screen.width
     this.plane.program.uniforms.uPlaneSizes.value = [this.plane.scale.x, this.plane.scale.y]
-    this.padding = 2
+    this.padding = isMobile ? 1.1 : 2
     this.width = this.plane.scale.x + this.padding
     this.widthTotal = this.width * this.length
     this.x = this.width * this.index
@@ -582,6 +586,13 @@ class App {
     this.scroll.target = this.scroll.target < 0 ? -item : item
   }
 
+  scrollByStep(direction: 'prev' | 'next') {
+    if (!this.medias || !this.medias[0]) return
+    const width = this.medias[0].width
+    this.scroll.target += direction === 'next' ? width : -width
+    this.onCheck()
+  }
+
   onResize() {
     this.screen = {
       width: this.container.clientWidth,
@@ -655,7 +666,12 @@ interface CircularGalleryProps {
   scrollEase?: number
 }
 
-export default function CircularGallery({
+export interface CircularGalleryHandle {
+  prev: () => void
+  next: () => void
+}
+
+const CircularGallery = forwardRef<CircularGalleryHandle, CircularGalleryProps>(function CircularGallery({
   items,
   bend = 3,
   textColor = '#ffffff',
@@ -663,8 +679,14 @@ export default function CircularGallery({
   font = 'bold 30px Figtree',
   scrollSpeed = 2,
   scrollEase = 0.05,
-}: CircularGalleryProps) {
+}: CircularGalleryProps, ref) {
   const containerRef = useRef<HTMLDivElement>(null)
+  const appRef = useRef<App | null>(null)
+
+  useImperativeHandle(ref, () => ({
+    prev: () => appRef.current?.scrollByStep('prev'),
+    next: () => appRef.current?.scrollByStep('next'),
+  }))
 
   useEffect(() => {
     if (!containerRef.current) return
@@ -677,8 +699,10 @@ export default function CircularGallery({
       scrollSpeed,
       scrollEase,
     })
+    appRef.current = app
     return () => {
       app.destroy()
+      appRef.current = null
     }
   }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase])
 
@@ -688,4 +712,6 @@ export default function CircularGallery({
       ref={containerRef}
     />
   )
-}
+})
+
+export default CircularGallery
